@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="acadgild">
+	<head>
+		<title>Assignment 11.3</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+		<script>
+			var myapp = angular.module('acadgild', []);
+
+			myapp.controller('mycontroller1', function($scope) {
+				$scope.showAlert = function() {
+					alert("NgDblClick Event triggered");
+				}
+			});
+
+		</script>
+	</head>
+	<body>
+		<div ng-controller="mycontroller1">
+			<button id="btn" ng-dblclick="showAlert()">NgDblClick Event</button>
+		</div>
+	</body>
+</html>
